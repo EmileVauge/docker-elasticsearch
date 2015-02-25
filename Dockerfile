@@ -13,6 +13,7 @@ RUN mv elasticsearch-1.4.4 elasticsearch
 
 # Install elasticsearch cloud aws plugin
 RUN cd elasticsearch && bin/plugin -install elasticsearch/elasticsearch-cloud-aws/2.4.1
+RUN cd elasticsearch && bin/plugin -install mobz/elasticsearch-head
 
 ENV ES_CLUSTER_NAME elasticsearch
 ENV ES_AWS_REGION us-east-1
